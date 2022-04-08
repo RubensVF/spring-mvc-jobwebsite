@@ -1,4 +1,7 @@
 <%@ page isELIgnored="false" %>
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring" %>
+<spring:url value="/resources" var="urlPublic" />
+<spring:url value="/" var="urlRoot" />
 
     <!-- start footer Area -->
     <footer class="footer-area section-gap">
@@ -81,21 +84,21 @@
     </footer>
     <!-- End footer Area -->
 
-    <script src="${param.urlPublic}/js/vendor/jquery-2.2.4.min.js"></script>
-    <script src="${param.urlPublic}/https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    <script src="${urlPublic}/js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="${urlPublic}/https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
-    <script src="${param.urlPublic}/js/vendor/bootstrap.min.js"></script>
-    <script src="${param.urlPublic}/js/easing.min.js"></script>
-    <script src="${param.urlPublic}/js/hoverIntent.js"></script>
-    <script src="${param.urlPublic}/js/superfish.min.js"></script>
-    <script src="${param.urlPublic}/js/jquery.ajaxchimp.min.js"></script>
-    <script src="${param.urlPublic}/js/jquery.magnific-popup.min.js"></script>
-    <script src="${param.urlPublic}/js/owl.carousel.min.js"></script>
-    <script src="${param.urlPublic}/js/jquery.sticky.js"></script>
-    <script src="${param.urlPublic}/js/jquery.nice-select.min.js"></script>
-    <script src="${param.urlPublic}/js/parallax.min.js"></script>
-    <script src="${param.urlPublic}/js/mail-script.js"></script>
-    <script src="${param.urlPublic}/js/main.js"></script>
+    <script src="${urlPublic}/js/vendor/bootstrap.min.js"></script>
+    <script src="${urlPublic}/js/easing.min.js"></script>
+    <script src="${urlPublic}/js/hoverIntent.js"></script>
+    <script src="${urlPublic}/js/superfish.min.js"></script>
+    <script src="${urlPublic}/js/jquery.ajaxchimp.min.js"></script>
+    <script src="${urlPublic}/js/jquery.magnific-popup.min.js"></script>
+    <script src="${urlPublic}/js/owl.carousel.min.js"></script>
+    <script src="${urlPublic}/js/jquery.sticky.js"></script>
+    <script src="${urlPublic}/js/jquery.nice-select.min.js"></script>
+    <script src="${urlPublic}/js/parallax.min.js"></script>
+    <script src="${urlPublic}/js/mail-script.js"></script>
+    <script src="${urlPublic}/js/main.js"></script>
     <script type="text/javascript"
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>

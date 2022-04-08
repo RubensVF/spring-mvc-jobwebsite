@@ -21,9 +21,9 @@ public class Job {
     private String company;
     private String img;
     private String description;
-    private Date date;
-    private String status;
-    private int distinguished;
+    private Date date = new Date();
+    private String status = "Created";
+    private int distinguished = 0;
     private String details;
     private double salary;
     @OneToOne

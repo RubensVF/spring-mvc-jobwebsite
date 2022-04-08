@@ -7,10 +7,11 @@
 
 <head>
     <spring:url value="resources" var="urlPublic" />
+    <spring:url value="/" var="urlRoot"/>
     <!-- Mobile Specific Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon-->
-    <link rel="shortcut icon" href="${urlPublic}/${urlPublic}/img/fav.png">
+    <link rel="shortcut icon" href="${urlPublic}/img/fav.png">
     <!-- Author Meta -->
     <meta name="author" content="codepixer">
     <!-- Meta Description -->
@@ -39,9 +40,7 @@
 <body>
 
     
-    <jsp:include page="includes/header.jsp">
-        <jsp:param name="urlPublic" value="urlPublic"/>
-    </jsp:include>
+    <jsp:include page="includes/header.jsp"></jsp:include>
    
 
     <!-- start banner Area -->
@@ -161,7 +160,7 @@
                     </div>
                     <div class="single-popular-post d-flex flex-row">
                         <div class="thumb">
-                            <img src="${urlPublic}/${urlPublic}/img/p2.png" alt="">
+                            <img src="${urlPublic}/img/p2.png" alt="">
                             <a class="btns text-uppercase" href="#">view job post</a>
                         </div>
                         <div class="details">
@@ -600,9 +599,7 @@
         </div>
     </section>
     <!-- End download Area -->
-    <jsp:include page="includes/footer.jsp">
-        <jsp:param name="urlPublic" value="${urlPublic}" />
-    </jsp:include>
+    <jsp:include page="includes/footer.jsp"></jsp:include>
 </body>
 
 </html>
