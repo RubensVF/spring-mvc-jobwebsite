@@ -1,5 +1,11 @@
 package com.ruben.springMvc.controllers;
 
+import java.util.List;
+
+import com.ruben.springMvc.model.Job;
+import com.ruben.springMvc.service.JobService;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,8 +13,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class MainController {
     
+    @Autowired
+    private JobService jService;
+
+
     @GetMapping("/")
-    public String hello(){
+    public String hello(Model model){
+        List<Job> jobs = jService.findAll();
+    
+        model.addAttribute("jobs", jobs);
         return "index";
     }
 

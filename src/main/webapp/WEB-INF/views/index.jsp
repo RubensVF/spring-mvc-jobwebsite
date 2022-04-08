@@ -42,6 +42,7 @@
     <jsp:include page="includes/header.jsp">
         <jsp:param name="urlPublic" value="urlPublic"/>
     </jsp:include>
+   
 
     <!-- start banner Area -->
     <section class="banner-area relative" id="home">
@@ -325,18 +326,13 @@
                         <li><a href="#">Intern</a></li>
                         <li><a href="#">part Time</a></li>
                     </ul>
+                    <c:forEach items="${jobs}" var="job">
                     <div class="single-post d-flex flex-row">
                         <div class="thumb">
-                            <img src="${urlPublic}/img/post.png" alt="">
+                            <img src="${urlPublic}/img/${job.img}" alt="">
                             <ul class="tags">
                                 <li>
-                                    <a href="#">Art</a>
-                                </li>
-                                <li>
-                                    <a href="#">Media</a>
-                                </li>
-                                <li>
-                                    <a href="#">Design</a>
+                                    <a href="#">${job.category.name}</a>
                                 </li>
                             </ul>
                         </div>
@@ -344,9 +340,9 @@
                             <div class="title d-flex flex-row justify-content-between">
                                 <div class="titles">
                                     <a href="single.html">
-                                        <h4>Creative Art Designer</h4>
+                                        <h4>${job.name}</h4>
                                     </a>
-                                    <h6>Premium Labels Limited</h6>
+                                    <h6>${job.company}</h6>
                                 </div>
                                 <ul class="btns">
                                     <li><a href="#"><span class="lnr lnr-heart"></span></a></li>
@@ -354,243 +350,15 @@
                                 </ul>
                             </div>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                temporinc ididunt ut dolore magna aliqua.
+                                ${job.description}
                             </p>
                             <h5>Job Nature: Full time</h5>
                             <p class="address"><span class="lnr lnr-map"></span> 56/8, Panthapath Dhanmondi
                                 Dhaka</p>
-                            <p class="address"><span class="lnr lnr-database"></span> 15k - 25k</p>
+                            <p class="address"><span class="lnr lnr-database"></span> $ ${job.salary}</p>
                         </div>
                     </div>
-                    <div class="single-post d-flex flex-row">
-                        <div class="thumb">
-                            <img src="${urlPublic}/img/post.png" alt="">
-                            <ul class="tags">
-                                <li>
-                                    <a href="#">Art</a>
-                                </li>
-                                <li>
-                                    <a href="#">Media</a>
-                                </li>
-                                <li>
-                                    <a href="#">Design</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="details">
-                            <div class="title d-flex flex-row justify-content-between">
-                                <div class="titles">
-                                    <a href="single.html">
-                                        <h4>Creative Art Designer</h4>
-                                    </a>
-                                    <h6>Premium Labels Limited</h6>
-                                </div>
-                                <ul class="btns">
-                                    <li><a href="#"><span class="lnr lnr-heart"></span></a></li>
-                                    <li><a href="#">Apply</a></li>
-                                </ul>
-                            </div>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                temporinc ididunt ut dolore magna aliqua.
-                            </p>
-                            <h5>Job Nature: Full time</h5>
-                            <p class="address"><span class="lnr lnr-map"></span> 56/8, Panthapath Dhanmondi
-                                Dhaka</p>
-                            <p class="address"><span class="lnr lnr-database"></span> 15k - 25k</p>
-                        </div>
-                    </div>
-                    <div class="single-post d-flex flex-row">
-                        <div class="thumb">
-                            <img src="${urlPublic}/img/post.png" alt="">
-                            <ul class="tags">
-                                <li>
-                                    <a href="#">Art</a>
-                                </li>
-                                <li>
-                                    <a href="#">Media</a>
-                                </li>
-                                <li>
-                                    <a href="#">Design</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="details">
-                            <div class="title d-flex flex-row justify-content-between">
-                                <div class="titles">
-                                    <a href="single.html">
-                                        <h4>Creative Art Designer</h4>
-                                    </a>
-                                    <h6>Premium Labels Limited</h6>
-                                </div>
-                                <ul class="btns">
-                                    <li><a href="#"><span class="lnr lnr-heart"></span></a></li>
-                                    <li><a href="#">Apply</a></li>
-                                </ul>
-                            </div>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                temporinc ididunt ut dolore magna aliqua.
-                            </p>
-                            <h5>Job Nature: Full time</h5>
-                            <p class="address"><span class="lnr lnr-map"></span> 56/8, Panthapath Dhanmondi
-                                Dhaka</p>
-                            <p class="address"><span class="lnr lnr-database"></span> 15k - 25k</p>
-                        </div>
-                    </div>
-                    <div class="single-post d-flex flex-row">
-                        <div class="thumb">
-                            <img src="${urlPublic}/img/post.png" alt="">
-                            <ul class="tags">
-                                <li>
-                                    <a href="#">Art</a>
-                                </li>
-                                <li>
-                                    <a href="#">Media</a>
-                                </li>
-                                <li>
-                                    <a href="#">Design</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="details">
-                            <div class="title d-flex flex-row justify-content-between">
-                                <div class="titles">
-                                    <a href="single.html">
-                                        <h4>Creative Art Designer</h4>
-                                    </a>
-                                    <h6>Premium Labels Limited</h6>
-                                </div>
-                                <ul class="btns">
-                                    <li><a href="#"><span class="lnr lnr-heart"></span></a></li>
-                                    <li><a href="#">Apply</a></li>
-                                </ul>
-                            </div>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                temporinc ididunt ut dolore magna aliqua.
-                            </p>
-                            <h5>Job Nature: Full time</h5>
-                            <p class="address"><span class="lnr lnr-map"></span> 56/8, Panthapath Dhanmondi
-                                Dhaka</p>
-                            <p class="address"><span class="lnr lnr-database"></span> 15k - 25k</p>
-                        </div>
-                    </div>
-                    <div class="single-post d-flex flex-row">
-                        <div class="thumb">
-                            <img src="${urlPublic}/img/post.png" alt="">
-                            <ul class="tags">
-                                <li>
-                                    <a href="#">Art</a>
-                                </li>
-                                <li>
-                                    <a href="#">Media</a>
-                                </li>
-                                <li>
-                                    <a href="#">Design</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="details">
-                            <div class="title d-flex flex-row justify-content-between">
-                                <div class="titles">
-                                    <a href="single.html">
-                                        <h4>Creative Art Designer</h4>
-                                    </a>
-                                    <h6>Premium Labels Limited</h6>
-                                </div>
-                                <ul class="btns">
-                                    <li><a href="#"><span class="lnr lnr-heart"></span></a></li>
-                                    <li><a href="#">Apply</a></li>
-                                </ul>
-                            </div>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                temporinc ididunt ut dolore magna aliqua.
-                            </p>
-                            <h5>Job Nature: Full time</h5>
-                            <p class="address"><span class="lnr lnr-map"></span> 56/8, Panthapath Dhanmondi
-                                Dhaka</p>
-                            <p class="address"><span class="lnr lnr-database"></span> 15k - 25k</p>
-                        </div>
-                    </div>
-                    <div class="single-post d-flex flex-row">
-                        <div class="thumb">
-                            <img src="${urlPublic}/img/post.png" alt="">
-                            <ul class="tags">
-                                <li>
-                                    <a href="#">Art</a>
-                                </li>
-                                <li>
-                                    <a href="#">Media</a>
-                                </li>
-                                <li>
-                                    <a href="#">Design</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="details">
-                            <div class="title d-flex flex-row justify-content-between">
-                                <div class="titles">
-                                    <a href="single.html">
-                                        <h4>Creative Art Designer</h4>
-                                    </a>
-                                    <h6>Premium Labels Limited</h6>
-                                </div>
-                                <ul class="btns">
-                                    <li><a href="#"><span class="lnr lnr-heart"></span></a></li>
-                                    <li><a href="#">Apply</a></li>
-                                </ul>
-                            </div>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                temporinc ididunt ut dolore magna aliqua.
-                            </p>
-                            <h5>Job Nature: Full time</h5>
-                            <p class="address"><span class="lnr lnr-map"></span> 56/8, Panthapath Dhanmondi
-                                Dhaka</p>
-                            <p class="address"><span class="lnr lnr-database"></span> 15k - 25k</p>
-                        </div>
-                    </div>
-                    <div class="single-post d-flex flex-row">
-                        <div class="thumb">
-                            <img src="${urlPublic}/img/post.png" alt="">
-                            <ul class="tags">
-                                <li>
-                                    <a href="#">Art</a>
-                                </li>
-                                <li>
-                                    <a href="#">Media</a>
-                                </li>
-                                <li>
-                                    <a href="#">Design</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="details">
-                            <div class="title d-flex flex-row justify-content-between">
-                                <div class="titles">
-                                    <a href="single.html">
-                                        <h4>Creative Art Designer</h4>
-                                    </a>
-                                    <h6>Premium Labels Limited</h6>
-                                </div>
-                                <ul class="btns">
-                                    <li><a href="#"><span class="lnr lnr-heart"></span></a></li>
-                                    <li><a href="#">Apply</a></li>
-                                </ul>
-                            </div>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                temporinc ididunt ut dolore magna aliqua.
-                            </p>
-                            <h5>Job Nature: Full time</h5>
-                            <p class="address"><span class="lnr lnr-map"></span> 56/8, Panthapath Dhanmondi
-                                Dhaka</p>
-                            <p class="address"><span class="lnr lnr-database"></span> 15k - 25k</p>
-                        </div>
-                    </div>
+                    </c:forEach>
 
                     <a class="text-uppercase loadmore-btn mx-auto d-block" href="category.html">Load More
                         job Posts</a>
